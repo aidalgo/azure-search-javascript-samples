@@ -7,8 +7,8 @@ import {
 } from '@azure/search-documents';
 
 // Azure AI Search resource settings
-const SEARCH_ENDPOINT = 'https://YOUR-RESOURCE-NAME.search.windows.net';
-const SEARCH_ADMIN_KEY = 'YOUR-RESOURCE-ADMIN-KEY';
+const SEARCH_ENDPOINT = 'https://as-air-search.search.windows.net';
+const SEARCH_ADMIN_KEY = 'hPi2OsF49ZHd8nGU96zn6DzzSYjpsECb4JKmEKillSAzSeBkSCiH';
 
 // Azure AI Search index settings
 const SEARCH_INDEX_NAME = 'good-books';
