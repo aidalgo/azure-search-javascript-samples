@@ -21,7 +21,7 @@ app.http('suggest', {
             const body = await request.json(); // Parses the JSON body of the request
             console.log(`suggest body ${body}`); // Logs the request body
 
-            let q = body.q + '~'; // Extracts the query parameter from the request body
+            let q = body.q; // Extracts the query parameter from the request body
             console.log(`suggest q ${q}`);
 
             const top = body.top; // Extracts the 'top' parameter to limit the number of suggestions
@@ -40,7 +40,7 @@ app.http('suggest', {
             }
 
             // Fetches suggestions based on the provided query, suggester, and limit (top)
-            const suggestions = await client.suggest(q, suggester, { top: parseInt(top) });
+            const suggestions = await client.suggest(q, suggester, { top: parseInt(top), fuzzy: true });
 
             context.log(suggestions); // Logs the received suggestions for debugging
 
